@@ -20,18 +20,20 @@ var groceryList=[
 ];
 
 function addOne(){
-  var newItemName = document.getElementbyId('itemName').value;
-  var newItemPrice = document.getElementbyId('itemPrice').value;
+  var newItemName = document.getElementbyId("itemName").value;
+  var newItemPrice = document.getElementbyId("itemPrice").value;
 
-  var obj ={
+
+    var obj ={
     name: newItemName,
-    price: newItemPrice,
+    price: newItemPrice
   };
   
 groceryList.push(obj);
 }
 
-for ( var i =0; i < groceryList.length; i++ ){
+
+for (var i =0; i < groceryList.length; i++ ){
   console.log(groceryList[i].name +  " $"  +  groceryList[i].price.toFixed(2));
 
 var printedList = document.createElement('div');
@@ -51,7 +53,7 @@ groceryList.totalAmount = function(){
     total = total + groceryList[i].price;
   }
 
-return total.toFixed(2);
+return total.toFixed(2); //outside the loop because we only want to return it once
 };
 
 /*var total= 0;
